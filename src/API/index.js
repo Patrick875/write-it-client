@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "http://localhost:4000/api/v1/" });
+const API = axios.create({
+	baseURL: "https://write-it-back.herokuapp.com/api/v1/",
+});
 
 API.interceptors.request.use((req) => {
 	if (localStorage.getItem("user")) {
